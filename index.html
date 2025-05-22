@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda de Teléfonos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+  <header class="bg-blue-600 text-white p-4">
+    <h1 class="text-2xl font-bold text-center">Tienda de Teléfonos Móviles</h1>
+  </header>
+
+  <main class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+    <!-- Producto 1 -->
+    <div class="bg-white rounded-xl shadow p-4">
+      <img src="https://via.placeholder.com/300x200" alt="Teléfono Modelo A" class="w-full rounded-lg mb-4">
+      <h2 class="text-xl font-semibold mb-2">Teléfono Modelo A</h2>
+      <p class="text-lg text-green-600 font-bold mb-2">€499</p>
+
+      <label class="block mb-1 text-sm">Color:</label>
+      <select class="w-full p-2 border rounded" onchange="cambiarColor(this)">
+        <option value="negro">Negro</option>
+        <option value="blanco">Blanco</option>
+        <option value="azul">Azul</option>
+        <option value="rojo">Rojo</option>
+      </select>
+
+      <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">Añadir al carrito</button>
+    </div>
+
+    <!-- Puedes duplicar este bloque para más productos -->
+
+  </main>
+
+  <script>
+    function cambiarColor(select) {
+      const color = select.value;
+      alert("Has seleccionado el color: " + color);
+    }
+  </script>
+
+</body>
+</html>
